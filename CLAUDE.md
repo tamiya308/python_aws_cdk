@@ -53,7 +53,6 @@ services. Everything in `.tmp/` is disposable.
 service (or `out/` if it can't). A plan that should become a repeatable procedure goes in `workflows/`,
 but only after asking me first.
 
-
 ## Context Boundaries (STRICT)
 ALLOWED directories (you may read, write, and list):
 - `python_aws_cdk`
