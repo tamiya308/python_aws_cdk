@@ -55,6 +55,8 @@ but only after asking me first.
 
 ## Context Boundaries (STRICT)
 ALLOWED directories (you may read, write, and list):
+- `python_aws_cdk`
+- `app.py`
 - `src/*`
 - `tests/`
 - `tools/`
