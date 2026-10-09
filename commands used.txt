@@ -1,0 +1,8 @@
+Install these: npm, pip,\
+
+Commands run:
+ python -m venv venv     
+ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+ .\venv\Scripts\Activate.ps1   
+npm i -g aws-cdk (already have globally)
+cdk init sample-app --language python
