@@ -16,8 +16,8 @@ class StudentApiCdkStack(Stack):
         # encryption (free). DESTROY removes the table and its data on `cdk destroy`.
         dynamodb.Table(
             self,
-            "StudentsEnrolmentsTable",
-            table_name="StudentsEnrolments",
+            "StudentEnrolmentsTable",
+            table_name="StudentEnrolments",
             partition_key=dynamodb.Attribute(
                 name="Id", type=dynamodb.AttributeType.NUMBER
             ),
