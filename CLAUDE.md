@@ -26,7 +26,8 @@ You're working inside the **WAT framework** (Workflows, Agents, Tools). This arc
 ## How to Operate
 - Try to reuse exsting tools in the `tools/` folder.
 - Ask clarifying questions if needed. 
-- With any task involving more than a few lines of code or scripts, create a plan, display the plan to me & ask me to approve it before proceeding.
+- Every time I ask for a series of instructions to be carried out, ask me to review the plan or work in the terminal session.
+Present me with any alternatives if there is some abiguity. After I approve those changes finish with a git commit:
 
 ## File Structure
 **What goes where:**
@@ -87,7 +88,7 @@ This applies to you AND to any sub-agent you spawn. If you launch an Explore age
 
 
 ## Git commits
-Every time I ask for a series of instructions to be carried out, finish with a git commit:
+Every time I ask for a series of instructions to be carried out, finish with a git commit after I have approved it:
 1. Run `.\tools\PreCommitCheck.ps1` (formats with Ruff, then runs the tests). Don't commit if a test fails; fix it or report it first.
 2. Commit only project files (`src/`, `tests/`, `tools/`, `workflows/`, `pyproject.toml`, `.gitignore`, `CLAUDE.md`). Never commit `.env`, `credentials.json`, `token.json`, `data/*.db` or `.venv/`; `.gitignore` already excludes them.
 3. Make one commit per logical change, with a message that says what changed and why.
