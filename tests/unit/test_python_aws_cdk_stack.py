@@ -14,25 +14,28 @@ def test_only_one_resource_created():
     template = _template()
 
     assert len(template.to_json()["Resources"]) == 1
-    template.resource_count_is("AWS::S3::Bucket", 1)
+    template.resource_count_is("AWS::DynamoDB::Table", 1)
 
 
-def test_s3_bucket_properties():
+def test_students_table_properties():
     template = _template()
 
     template.has_resource_properties(
-        "AWS::S3::Bucket",
+        "AWS::DynamoDB::Table",
         {
-            "BucketName": "python-cdk-s3-mluy",
-            "PublicAccessBlockConfiguration": {
-                "BlockPublicAcls": True,
-                "BlockPublicPolicy": True,
-                "IgnorePublicAcls": True,
-                "RestrictPublicBuckets": True,
-            },
+            "TableName": "Students",
+            "KeySchema": [
+                {"AttributeName": "Id", "KeyType": "HASH"},
+                {"AttributeName": "Name", "KeyType": "RANGE"},
+            ],
+            "AttributeDefinitions": [
+                {"AttributeName": "Id", "AttributeType": "N"},
+                {"AttributeName": "Name", "AttributeType": "S"},
+            ],
+            "BillingMode": "PAY_PER_REQUEST",
         },
     )
     template.has_resource(
-        "AWS::S3::Bucket",
+        "AWS::DynamoDB::Table",
         {"DeletionPolicy": "Delete", "UpdateReplacePolicy": "Delete"},
     )
