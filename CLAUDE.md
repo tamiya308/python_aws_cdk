@@ -26,8 +26,7 @@ You're working inside the **WAT framework** (Workflows, Agents, Tools). This arc
 ## How to Operate
 - Try to reuse exsting tools in the `tools/` folder.
 - Ask clarifying questions if needed. 
-- Create a plan for tasks with any complexity. Ask user to approve tasks before proceeding
-
+- With any task involving more than a few lines of code or scripts, create a plan, display the plan to me & ask me to approve it before proceeding.
 
 ## File Structure
 **What goes where:**

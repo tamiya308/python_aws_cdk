@@ -2,10 +2,9 @@
 
 import aws_cdk as cdk
 
-from python_aws_cdk.python_aws_cdk_stack import PythonAwsCdkStack
-
+from python_aws_cdk.python_aws_cdk_stack import StudentApiCdkStack
 
 app = cdk.App()
-PythonAwsCdkStack(app, "PythonAwsCdkStack")
+StudentApiCdkStack(app, "StudentApiCdkStack")
 
 app.synth()
