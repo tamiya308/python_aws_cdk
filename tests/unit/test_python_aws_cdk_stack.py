@@ -17,13 +17,13 @@ def test_only_one_resource_created():
     template.resource_count_is("AWS::DynamoDB::Table", 1)
 
 
-def test_students_table_properties():
+def test_students_enrolments_table_properties():
     template = _template()
 
     template.has_resource_properties(
         "AWS::DynamoDB::Table",
         {
-            "TableName": "Students",
+            "TableName": "StudentsEnrolments",
             "KeySchema": [
                 {"AttributeName": "Id", "KeyType": "HASH"},
                 {"AttributeName": "Name", "KeyType": "RANGE"},
