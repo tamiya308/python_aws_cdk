@@ -1,6 +1,7 @@
 *.swp
 .pytest_cache
 *.egg-info
+commands used.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
